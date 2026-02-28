@@ -3,15 +3,15 @@ import {ref, onMounted, watch, nextTick} from 'vue';
 
 // 使用 Record<string, string> 来声明 exam 的类型
 const exam = ref<Record<string, string>>({
-  lsh: '022810240461356670133',
-  realName: '杨政瓯',
-  bmh: '140598676',
-  zkzh: '116646114053462',
-  zf: '129',
+  lsh: '022820240461356670199',
+  realName: 'XXX',
+  bmh: '170597676',
+  zkzh: '116684114053462',
+  zf: '272',
   km1: '(101)思想政治理论：55',
   km2: '(204)英语（二）：49',
-  km3: '(302)数学（二）：25',
-  km4: '(833)计算机技术基础：缺考',
+  km3: '(302)数学（二）：76',
+  km4: '(833)计算机技术基础：92',
   bz: '无',
 });
 

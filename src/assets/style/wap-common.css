@@ -1,4 +1,35 @@
 /* vantlayout样式 */
+
+/* van-hairline 分隔线样式 - 使用与 Vant 一致的 200%/scale(0.5) 方案 */
+[class*=van-hairline] {
+    position: relative;
+}
+
+[class*=van-hairline]::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    pointer-events: none;
+    box-sizing: border-box;
+    border: 0 solid #ebedf0;
+}
+
+.van-hairline--bottom::after {
+    border-bottom-width: 1px;
+}
+
+.van-hairline--top-bottom::after {
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+}
+
 .van-row:after {
     display: table;
     clear: both;

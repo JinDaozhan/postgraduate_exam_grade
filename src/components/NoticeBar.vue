@@ -27,7 +27,7 @@ const handlePressEnd = () => {
       @touchend="handlePressEnd"
   >
     招生单位说明：<span
-      contenteditable="true">标题2025年份单击可更改；单击这里，可更改内容；长按这里1秒，可隐藏单位说明；刷新页面恢复</span>
+      contenteditable="true">请考生及时关注我校研究生院官方网站发布的相关信息。</span>
   </div>
 </template>
 

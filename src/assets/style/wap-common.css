@@ -1,4 +1,19 @@
 /* vantlayout样式 */
+
+/* van-hairline 分隔线样式 */
+[class*=van-hairline]::after {
+    display: none !important;
+}
+
+.van-hairline--bottom {
+    border-bottom: 1px solid #ebedf0;
+}
+
+.van-hairline--top-bottom {
+    border-top: 1px solid #ebedf0;
+    border-bottom: 1px solid #ebedf0;
+}
+
 .van-row:after {
     display: table;
     clear: both;

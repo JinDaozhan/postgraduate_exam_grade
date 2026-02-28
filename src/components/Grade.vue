@@ -3,19 +3,21 @@ import {ref, onMounted, watch, nextTick} from 'vue';
 
 // 使用 Record<string, string> 来声明 exam 的类型
 const exam = ref<Record<string, string>>({
-  realName: '张三',
-  bmh: '100199999',
-  zkzh: '1234567890',
-  zf: '500',
-  km1: '(101)思想政治理论：100',
-  km2: '(201)英语（一）：100',
-  km3: '(301)数学（一）：150',
-  km4: '(408)计算机科学专业基础：150',
+  lsh: '022820240461356670199',
+  realName: 'XXX',
+  bmh: '170597676',
+  zkzh: '116684114053462',
+  zf: '272',
+  km1: '(101)思想政治理论：55',
+  km2: '(204)英语（二）：49',
+  km3: '(302)数学（二）：76',
+  km4: '(833)计算机技术基础：92',
   bz: '无',
 });
 
 // fields 数组
 const fields = [
+  {label: '查询流水号', model: 'lsh'},
   {label: '姓名', model: 'realName'},
   {label: '报名号', model: 'bmh'},
   {label: '准考证号', model: 'zkzh'},
@@ -29,7 +31,7 @@ const fields = [
 
 // 提取科目成绩的函数
 function extractScore(subject: string): number {
-  const match = subject.match(/：(\d+)/);
+  const match = subject.match(/[：:](\d+)/);
   return match ? parseInt(match[1], 10) : 0;
 }
 
@@ -78,9 +80,9 @@ function adjustTextareaHeight() {
 
 <template>
   <div class="van-cell-group van-hairline--top-bottom van-panel">
-    <div class="van-cell van-hairline van-panel__header"></div>
+    <div class="van-cell van-hairline--bottom van-panel__header"></div>
     <div class="van-panel__content">
-      <div v-for="field in fields" :key="field.model" class="van-cell van-hairline van-field">
+      <div v-for="field in fields" :key="field.model" class="van-cell van-hairline--bottom van-field">
         <div class="van-cell__title"><span>{{ field.label }}</span></div>
         <div class="van-cell__value">
           <div class="van-field__body">

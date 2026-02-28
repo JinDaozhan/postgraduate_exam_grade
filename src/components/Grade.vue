@@ -78,9 +78,9 @@ function adjustTextareaHeight() {
 
 <template>
   <div class="van-cell-group van-hairline--top-bottom van-panel">
-    <div class="van-cell van-hairline van-panel__header"></div>
+    <div class="van-cell van-hairline--bottom van-panel__header"></div>
     <div class="van-panel__content">
-      <div v-for="field in fields" :key="field.model" class="van-cell van-hairline van-field">
+      <div v-for="field in fields" :key="field.model" class="van-cell van-hairline--bottom van-field">
         <div class="van-cell__title"><span>{{ field.label }}</span></div>
         <div class="van-cell__value">
           <div class="van-field__body">

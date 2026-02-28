@@ -3,19 +3,21 @@ import {ref, onMounted, watch, nextTick} from 'vue';
 
 // 使用 Record<string, string> 来声明 exam 的类型
 const exam = ref<Record<string, string>>({
-  realName: '李浩宇',
+  lsh: '022810240461356670133',
+  realName: '杨政瓯',
   bmh: '140598676',
   zkzh: '116646114053462',
-  zf: '255',
-  km1: '(101)思想政治理论：61',
-  km2: '(204)英语（二）：43',
-  km3: '(302)数学（二）：76',
-  km4: '(408)计算机科学专业基础：75',
+  zf: '129',
+  km1: '(101)思想政治理论：55',
+  km2: '(204)英语（二）：49',
+  km3: '(302)数学（二）：25',
+  km4: '(833)计算机技术基础：缺考',
   bz: '无',
 });
 
 // fields 数组
 const fields = [
+  {label: '查询流水号', model: 'lsh'},
   {label: '姓名', model: 'realName'},
   {label: '报名号', model: 'bmh'},
   {label: '准考证号', model: 'zkzh'},
@@ -29,7 +31,7 @@ const fields = [
 
 // 提取科目成绩的函数
 function extractScore(subject: string): number {
-  const match = subject.match(/：(\d+)/);
+  const match = subject.match(/[：:](\d+)/);
   return match ? parseInt(match[1], 10) : 0;
 }
 
